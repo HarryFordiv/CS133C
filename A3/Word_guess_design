@@ -1,0 +1,56 @@
+	Basic design for program that acts similarly to a game of hangman:  First we need a bank of words either stored in the code itself or a textfile that can be read from, then we need to pull a random word from that pool so the user can play with multiple different words.  
+	
+	To let the user play we wil need a char array that can store our word and in a loop prompt the user to guess a single letter at a time which will fill an array of underscores _____ set to the size of our word in the same places where a user inputed letter matches the stored word.
+	
+	We will have to loop through the char array of our word and record where any letters match and then go through our list of underscores and fill them in in a similar looping style.  We keep going through our loops until the user wins the game or misses 6 times(head,body,2 arms,2 legs) and then tell the user the word and offer to play again. 
+	
+	Everything but variables can be contained in a while(bool) loop to let us check if the user wishes to play again the, any variables that need to be reset for each game can be set once at the start of this loop.  
+
+should be somthing like this
+
+void main()
+
+	initalize variables and set statics with values
+
+	tell user about the game	
+	
+	find our word from our pool and fill underscore array of same size (probably with a loop)
+
+	while(bool)
+
+	set dynamic variables
+	
+	while(user has guesses left)
+	
+		show user our underscore array and prompt them to guess a letter
+
+		compare letter to our array of characters in a loop
+
+			compare to each component of the array until we hit the end of the array
+			store when the letters matched
+
+		if statment to proceed with filling our underscore array or not with loop contained
+		
+		else reduce number of remaining guesses
+
+		loop unitl user wins or loses
+
+	if statement to check and respond if the user wins
+
+	else tell the user they lost
+
+	let the user replay the game or exit 
+
+
+To test this code is working propery we should first allow ourselves to be prepared for user error, checking when the user inputs a letter that they are putting in a propper character and prompting them again if they input somthing else.  
+	
+Then we can test the code itself by giving it simple words and char arrays full of a single character to assure that words with multiples of the same characters don't cause the user to lose unfairly.
+
+Then we can test the code while letting it show us the word it has chosen so we can assure that it functions the way we want it to. 
+
+
+
+
+
+
+
